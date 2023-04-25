@@ -1,0 +1,115 @@
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', Sans-Serif;
+  background-color: #f6f6f6;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  user-select: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.turn {
+  font-size: 7vw;
+  text-align: center;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.cell {
+  width: 30vw;
+  height: 30vw;
+  margin: auto;
+  text-align: center;
+  font-size: 25vw;
+}
+div.row0,
+div.row1 {
+  border-bottom: 3px solid black;
+}
+div.row1,
+div.row2 {
+  border-top: 3px solid black;
+}
+div.cell0,
+div.cell1 {
+  border-right: 3px solid black;
+}
+div.cell1,
+div.cell2 {
+  border-left: 3px solid black;
+}
+.cell:hover {
+  background-color: rgba(127, 255, 212, 0.5);
+}
+.dialog {
+  display: none;
+  left: 30vw;
+  top: 30vh;
+}
+.dialogCard {
+  width: 40vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid black;
+}
+.dialogMessage {
+  margin: auto;
+  font-size: 7vw;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5vh;
+}
+.dialogYes,
+.dialogNo {
+  font-size: 5vw;
+  margin: auto;
+}
+@media screen and (min-aspect-ratio: 9/10) {
+  .cell {
+    width: 25vh;
+    height: 25vh;
+    font-size: 20vh;
+  }
+  .turn {
+    font-size: 7vh;
+  }
+  .dialogMessage {
+    font-size: 7vh;
+  }
+  .buttonContainer {
+    font-size: 3vh;
+  }
+  .dialogYes,
+  .dialogNo {
+    font-size: 5vh;
+    margin: auto;
+  }
+}
+@keyframes pop {
+  from {
+    border: transparent;
+  }
+  50% {
+    border: transparent;
+    transform: scale(1.5);
+  }
+  to {
+    border: transparent;
+    transform: scale(1);
+  }
+}
