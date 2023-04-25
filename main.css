@@ -13,7 +13,8 @@ body {
   height: 100vh;
 }
 .turn {
-  font-size: 7vw;
+  font-size: 5vh;
+  margin: 2vh;
   text-align: center;
 }
 .grid {
@@ -53,12 +54,13 @@ div.cell2 {
 }
 .dialog {
   display: none;
-  left: 30vw;
-  top: 30vh;
+  left: 50%;
+  top: 50%;
 }
 .dialogCard {
-  width: 40vw;
+  width: 80vw;
   height: 40vh;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -98,6 +100,11 @@ div.cell2 {
   .dialogNo {
     font-size: 5vh;
     margin: auto;
+  }
+}
+@media screen and (min-aspect-ratio: 6/5) {
+  .dialogCard {
+    width: 40vw;
   }
 }
 @keyframes pop {
